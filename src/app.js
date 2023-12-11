@@ -5,7 +5,8 @@ import cors from 'cors';
 //importamos las rutas para usuarios
 import authRoutes from './routes/auth.routes.js';
 //importamos las rutas para los productos
-import productRoutes from './routes/products.routes.js';
+import efe from './routes/products.routes.js';
+import usersInfo from './routes/user.routes.js';
 
 const app = express();
 
@@ -27,6 +28,6 @@ app.use(cookieParser());
 
 //indicamos que el servidos utilice el objeto authRoutes
 app.use('/api/', authRoutes);
-app.use('/api', productRoutes);
-
+app.use('/api', efe);
+app.use('/api', usersInfo);
 export default app;
